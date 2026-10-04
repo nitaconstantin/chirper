@@ -1,0 +1,26 @@
+Chirper
+
+
+
+### **Your first route**
+
+1\. create first route
+
+2\. update the default route('welcome') to home route
+
+3\. create the new view
+
+4\. create layout view
+
+5\. change title of every page
+
+6\. add style to the project
+
+
+
+
+
+
+
+
+
