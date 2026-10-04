@@ -1,20 +1,37 @@
-Chirper
+# **Chirper**
 
 
 
 ### **Your first route**
 
-1\. create first route
+1\. create first route V
 
-2\. update the default route('welcome') to home route
+2\. update the default route('welcome') to home route V
 
-3\. create the new view
+3\. create the new view V
 
-4\. create layout view
+4\. create layout view V
 
-5\. change title of every page
+5\. change title of every page V
 
-6\. add style to the project
+6\. add style to the project V
+
+
+
+### **Deploy your app**
+
+1. Create a new git repository for the project V
+2. Upload the project to GitHub.com V
+
+
+
+### **What is MVC?**
+
+1. create an empty ChirpController(app\\Http\\Controllers\\ChirpController) V
+2. in the ChirpController add an index method and return a view V
+3. In the web routes change the default route to points to the newly index method added V
+4. add a simple chirps array in that index method and show the chirps V
+5. delete the ChirpController, after you've copied the index method, and create a new ChirpController this time to be a --resource controller V
 
 
 
