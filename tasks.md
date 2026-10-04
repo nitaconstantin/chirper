@@ -40,8 +40,20 @@
 1. create a migration named create\_chirps\_table V
 2. add columns for(user\_id, message(255)) V
 3. user\_id column must be nuulable, constrained, and cascadeOnDelete V
-4. migrate the newly created migration
+4. migrate the newly created migration V
 5. add your first chirp using artisan tinker 'my first chirp in the database!' V
+
+
+
+### **Our first model**
+
+1. create a Chirp model V
+2. add $fillable array for your model V
+3. create relationship between a user and chirp models V
+4. use tinker to show a user of a chirp V
+5. in the controller change the hardcoded array of chirps with the newly created Model V
+6. change the view to show the newly values from the database(use forelse directive) V
+7. add more chirps in your database V
 
 
 
