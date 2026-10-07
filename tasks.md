@@ -57,9 +57,26 @@
 
 
 
+### **Showing the feed**
+
+1. create a component for a chirp V
+2. use the default avatars V
+3. pass the chirp prop to the component V
+4. create a Chirp seeder V
 
 
 
+### **Creating and storing Chirps**
 
-
+1. add a form for creating a chirp V
+2. create the store method in your controller V
+3. in the method validate the inputs V
+4. then create the chirp V
+5. redirect to home with a success message V
+6. create a web route for your form V
+7. verify your backend validation by removing front end validation V
+8. show errors on the view V
+9. add errors on the form V
+10. show the old value of input V
+11. customize validation messages V
 
