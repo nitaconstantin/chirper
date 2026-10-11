@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Chirp;
+
 use Illuminate\Http\Request;
 
 class ChirpController extends Controller
@@ -76,24 +77,37 @@ class ChirpController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Chirp $chirp)
     {
-        //
+        return view('chirps.edit', compact('chirp'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Chirp $chirp)
     {
-        //
+          // validate inputs
+       $validated = $request->validate([
+        'message' => ['required', 'max:255', 'min:5']
+       ],
+       [
+        'message.required' => "Your message field can't be empty!" ,
+        'message.max' => 'Your message must be less than 255 characters!'
+       ]);
+       // update chirp
+       $chirp->update($validated);
+       
+       // redirect to home with a status success
+       return redirect('/')->with('success', "Your chirp has been updated!");
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Chirp $chirp)
     {
-        //
+        $chirp->delete();
+        return redirect('/')->with('success', 'Your chirp has beed deleted!');
     }
 }

@@ -80,3 +80,18 @@
 10. show the old value of input V
 11. customize validation messages V
 
+
+
+### **Edit and delete Chirps**
+
+1. add buttons for edit and delete actions before the chirp message V
+2. add routes for each action provided V
+3. create a route resource to group all the routes which belong to the chirp route V
+4. create the edit view V
+5. on the delete button use a return to confirm V
+6. create a policy for the chirp model V
+7. in the policy file verify if the chirp user is the logged user V
+8. add label for edited chirp V
+
+
+
