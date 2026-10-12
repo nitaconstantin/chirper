@@ -18,8 +18,14 @@
             <a href="/" class="btn btn-ghost text-xl">🐦 Chirper</a>
         </div>
         <div class="navbar-end gap-2">
-            <a href="#" class="btn btn-ghost btn-sm">Sign In</a>
-            <a href="#" class="btn btn-primary btn-sm">Sign Up</a>
+            @auth
+                <span class="text-sm">{{ auth()->user()->name }}</span>
+                <a href="{{ route('logout') }}" class="btn btn-primary">Logout</a>
+            @else
+                <a href="/login" class="btn btn-ghost btn-sm">Sign In</a>
+                <a href="{{ route('register') }}" class="btn btn-primary btn-sm">Sign Up</a>
+            @endauth
+
         </div>
     </nav>
 

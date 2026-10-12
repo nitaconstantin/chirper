@@ -95,3 +95,23 @@
 
 
 
+### **Basic Authentication: Registration**
+
+1. create register page in auth directory V
+2. add a route to your new view V
+3. change the value of href attribute V
+4. create a register controller which will be an invokable controller V
+5. in the invoke method you have to validate, create user, login user and redirect to the / V
+6. create also a post route to your register controller and group routes V
+7. update the navigation href's V
+8. update the navigation if user is logged in show something else show something else V
+9. make a logout controller which is located in the same auth folder V
+10. in the logout controller you have to do the inverse procedure for register (grab the user, logout the user, redirect to home) V
+11. add a new route for the logout controller V
+12. group routes with auth middleware V
+13. change the create chirp method in your controller with auth (auth()->user()->chirps()->create(\[])) V
+14. add the policy we've already created V
+15. update the chirp view(only user which created the chirp can edit or delete the chirp) V
+16. use AuthorizesRequests for using $this->authorize('update', $chirp) V
+17. 
+

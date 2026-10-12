@@ -27,18 +27,20 @@
                         <span class="text-sm text-base-content/60">{{ $chirp->created_at->diffForHumans() }}</span>
                         @if ($chirp->updated_at->gt($chirp->created_at->addSeconds(5)))
                             <span>.</span>
-                            <span class="text-sm italic">edited</span>
+                            <span class="text-sm italic"></span>
                         @endif
                     </div>
-                    <div class="flex space-x-3">
-                        <a href="/chirps/{{ $chirp->id }}/edit" class="btn btn-outlined">Edit</a>
-                        <form action="/chirps/{{ $chirp->id }}" method="POST">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" class="btn text-red-500"
-                                onclick="return confirm('Are you surre, you want to delete this chirp?')">Delete</button>
-                        </form>
-                    </div>
+                    @can('update', $chirp)
+                        <div class="flex space-x-3">
+                            <a href="/chirps/{{ $chirp->id }}/edit" class="btn btn-outlined">Edit</a>
+                            <form action="/chirps/{{ $chirp->id }}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn text-red-500"
+                                    onclick="return confirm('Are you surre, you want to delete this chirp?')">Delete</button>
+                            </form>
+                        </div>
+                    @endcan
                 </div>
 
                 <p class="mt-1">
